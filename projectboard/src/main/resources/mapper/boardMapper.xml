@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.controllerexercise2.dao.BoardDao">
+
+	<!-- 전체 데이터 갯수 -->
+	<select id="getListCount" resultType="int">
+		select count(*) from board
+	</select>
+	
+	<!-- 페이지별로 목록 가져오기 -->
+	<select id="getList" parameterType="int" resultType="board">
+		select * from board order by board_re_ref desc, board_re_seq asc limit #{page}, 10;
+	</select>
+	
+
+</mapper>
