@@ -10,6 +10,6 @@ import com.example.controllerexercise2.model.Board;
 public interface BoardDao {
 
 	public int getListCount();
-	public List<Board> getList(int page);
+	public List<Board> getList(int limitStartNumber);
 
 }

@@ -11,7 +11,7 @@
 	
 	<!-- 페이지별로 목록 가져오기 -->
 	<select id="getList" parameterType="int" resultType="board">
-		select * from board order by board_re_ref desc, board_re_seq asc limit #{page}, 10;
+		select * from board order by board_re_ref desc, board_re_seq asc limit #{limitStartNumber}, 10;
 	</select>
 	
 

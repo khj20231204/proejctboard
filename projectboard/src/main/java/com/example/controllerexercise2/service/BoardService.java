@@ -19,9 +19,9 @@ public class BoardService {
 		return dao.getListCount();
 	}
 
-	public List<Board> getList(int page) {
+	public List<Board> getList(int limitStartNumber) {
 		// TODO Auto-generated method stub
-		return dao.getList(page);
+		return dao.getList(limitStartNumber);
 	}
 
 }
